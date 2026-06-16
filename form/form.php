@@ -1,13 +1,17 @@
 <?php
 
 $conn = mysqli_connect("localhost","root","","homework");
-
+// echo $Global;
+print_r($GLOBALS);
+print_r($_SERVER);
+ECHO "<br>";
+print_r($_POST);
 if(!$conn)
 {
     die("Connection Failed");
 }
 
-if(isset($_POST['submit']))
+if(isset($_REQUEST['submit']))
 {
     $n = $_POST['name'];
     $e = $_POST['email'];
